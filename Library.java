@@ -40,4 +40,7 @@ public String removeTitle(String title){
     }
   }
 
+  public static void main(String[] args){
+    new Library("neilson", "address", 5);
+  }
 }

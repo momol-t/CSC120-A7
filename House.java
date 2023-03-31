@@ -1,47 +1,47 @@
 import java.util.ArrayList;
 
-
 public class House extends Building {
-  private ArrayList<String> residents; 
+  private ArrayList<String> residents;
   private boolean hasDiningRoom;
-
 
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super(name, address, nFloors);
     this.hasDiningRoom = hasDiningRoom;
     this.residents = new ArrayList<String>();
   }
-  
-  public boolean hasDiningRoom(){
-    if (hasDiningRoom == true){
+
+  public boolean hasDiningRoom() {
+    if (hasDiningRoom == true) {
       return true;
-    } else{
+    } else {
       return false;
     }
   }
 
-  public int nResidents(){
+  public int nResidents() {
     return this.residents.size();
   }
 
-  public void moveIn(String name){
+  public void moveIn(String name) {
     residents.add(name);
   }
 
-  public String moveOut(String name){
+  public String moveOut(String name) {
     residents.remove(name);
     return name;
   }
 
-  public boolean isResident(String person){
-    if (residents.contains(person)){
+  public boolean isResident(String person) {
+    if (residents.contains(person)) {
       System.out.println("yes, " + person + " is a resident");
       return true;
-    } else{
+    } else {
       System.out.println("no, " + person + " is not a resident");
       return false;
     }
   }
 
-
+  public static void main(String[] args) {
+    new House("king", "180 Elm Steet", 4, true);
+  }
 }
